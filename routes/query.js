@@ -9,7 +9,9 @@ var config = require('../config/site.json');
 
 var captcha = require('express-recaptcha').RecaptchaV2;
 
-var recaptcha = new captcha(config.grecaptcha.public_token, config.grecaptcha.private_token, {callback:'recaptcha_callback'});
+var recaptcha = new captcha(config.grecaptcha.public_token || process.env.grecaptcha_public_token, 
+    config.grecaptcha.private_token || process.env.grecaptcha_private_token, 
+    {callback:'recaptcha_callback'});
 
 var query_controller = require('../controllers/contentController')
 

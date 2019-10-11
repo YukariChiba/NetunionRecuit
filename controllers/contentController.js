@@ -33,17 +33,17 @@ exports.do_registration = (request, response) => {
     );
     var transporter = nodemailer.createTransport({
         pool: true,
-        host: config.mail.smtp.server,
-        port: config.mail.smtp.port,
+        host: config.mail.smtp.server || process.env.mail_smtp_server,
+        port: config.mail.smtp.port || process.env.mail_smtp_port,
         secure: true,
         auth: {
-            user: config.mail.smtp.account,
-            pass: config.mail.smtp.pass
+            user: config.mail.smtp.account || process.env.mail_smtp_account,
+            pass: config.mail.smtp.pass || process.env.mail_smtp_account
         }
     });
     var mailOptions = {
-        from: config.mail.send_account,
-        to: config.mail.receive_account,
+        from: config.mail.send_account || process.env.mail_send_account,
+        to: config.mail.receive_account || process.env.mail_receive_account,
         subject: '新的报名请求！',
         html:  '<h1>' + request.body["basic"]["name"] + ' 申请 ' + direction2word(request.body["basic"]["direction"]) + '</h1>\
                 <p>性别: ' + request.body["basic"]["gender"] + '</p>\
