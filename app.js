@@ -20,5 +20,5 @@ server.use('/', index_route)
 server.use('/', register_route)
 server.use('/', query_route)
 
-server.listen(8080, '::')
+server.listen(process.env.PORT || 8080)
 console.log('Server started.')
