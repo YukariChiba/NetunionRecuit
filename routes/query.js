@@ -5,7 +5,14 @@ var bodyParse = require('body-parser')
 var jsonParser = bodyParse.json()
 var urlencoded = bodyParse.urlencoded({ extended: true })
 
-var config = require('../config/site.json');
+try {
+	var config = require('../config/site.json');
+} catch (e) {
+    if (e.code !== 'MODULE_NOT_FOUND') {
+        throw e;
+    }
+	var config = {}
+}
 
 var captcha = require('express-recaptcha').RecaptchaV2;
 
