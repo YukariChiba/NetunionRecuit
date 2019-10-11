@@ -1,0 +1,117 @@
+@media screen and (max-width: 1024px) {
+  .container {
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+
+  .vertical {
+    .steps,
+    .content,
+    .actions {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  #find_bank {
+    width: 100%;
+  }
+
+  .form-radio-flex input + label {
+    width: 190px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-radio-flex input + label {
+    width: 100px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #steps-uid-0-p-0 {
+    .form-row,
+    .form-group,
+    .form-date {
+      width: 100%;
+    }
+  }
+
+  .form-flex {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+    margin: 0px;
+
+    .form-group {
+      padding: 0px;
+    }
+  }
+
+  fieldset,
+  .actions ul {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .form-flex .form-group {
+    width: 100%;
+  }
+
+  #slider-margin .noUi-pips {
+    width: 94%;
+  }
+
+  .steps ul li {
+    padding-bottom: 0;
+  }
+
+  .form-radio label {
+    margin-right: 5%;
+    height: auto;
+  }
+
+  .content {
+    min-height: 0;
+  }
+
+  .vertical .steps {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-date-group,
+  .form-find {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column;
+  }
+
+  #find_bank {
+    margin-bottom: 20px;
+  }
+
+  .actions ul li a {
+    width: 100px;
+  }
+
+  .form-radio-flex {
+    margin: 0 -5px;
+
+    .form-radio-item {
+      padding: 0 5px;
+    }
+
+    input + label {
+      width: 90px;
+      height: 61px;
+    }
+  }
+}

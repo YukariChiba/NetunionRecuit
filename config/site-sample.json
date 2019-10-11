@@ -1,0 +1,19 @@
+{
+    "basic": {
+        "site_name": "Recruit"
+    },
+    "grecaptcha": {
+        "public_token": "",
+        "private_token": ""
+    },
+    "mail": {
+        "smtp": {
+            "server": "",
+            "port": 465,
+            "account": "",
+            "pass": ""
+        },
+        "send_account": "",
+        "receive_account": ""
+    }
+}

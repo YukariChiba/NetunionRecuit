@@ -1,0 +1,108 @@
+input,
+select,
+textarea {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important;
+}
+
+input {
+  width: 100%;
+  display: block;
+  border: 1px solid $border-color;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  color: #222;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Roboto Slab";
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    -o-appearance: none !important;
+    -ms-appearance: none !important;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+  }
+
+  &[type="checkbox"] {
+    appearance: checkbox !important;
+    -moz-appearance: checkbox !important;
+    -webkit-appearance: checkbox !important;
+    -o-appearance: checkbox !important;
+    -ms-appearance: checkbox !important;
+  }
+
+  &[type="radio"] {
+    appearance: radio !important;
+    -moz-appearance: radio !important;
+    -webkit-appearance: radio !important;
+    -o-appearance: radio !important;
+    -ms-appearance: radio !important;
+  }
+}
+
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important;
+}
+
+input#stu_id_lookup {
+  display: inline;
+}
+
+label.error {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  font-size: 0;
+
+  &:after {
+    font-family: "Material-Design-Iconic-Font";
+    position: absolute;
+    content: "\f135";
+    right: 20px;
+    top: 50px;
+    font-size: 13px;
+    color: $red-color;
+  }
+}
+
+input.error,
+select.error {
+  border: 1px solid $red-color;
+}
+
+
+.text-input {
+  font-size: 12px;
+  color: $grey-color;
+  display: block;
+  margin-top: 5px;
+
+  span {
+    color: $black-color;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,26 @@
+<section id="panel-2" class="hidden">
+    <h2>查询您的填报记录</h2>
+    <p class="desc">若需修改内容，请直接重新填报。</p>
+    <div class="fieldset-content">
+        <div class="form-group">
+            <label class="form-label">学号</label>
+            <div class="form-flex">
+                <div class="form-group">
+                    <input type="text" name="stu_id_lookup" id="stu_id_lookup" value="2016000000001" required />
+                    <label id="stu_id_lookup-error" class="error" for="stu_id_lookup"></label>
+                    <span class="text-input">请输入您的学号</span>
+                </div>
+                <button class="button-styled" id="query-button" type="button">查询</button>
+            </div>
+            <div id="recaptcha_element_query"></div>
+            <div id="query_error" style="display:none;">
+                <h2>出错啦！</h2>
+                <div id="query_error_desc"></div>
+            </div>
+            <div id="query_result" style="display:none;">
+                <h2>查询结果</h2>
+                您选择的方向是： <div id="query_result_desc"></div>
+            </div>
+        </div>
+    </div>
+</section>

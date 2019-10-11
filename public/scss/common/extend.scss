@@ -1,0 +1,36 @@
+/* @extend display-flex; */
+
+display-flex,
+.form-flex,
+.form-date-group,
+.steps ul {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.title {
+  display: flex;
+  display: -webkit-flex;
+
+  .step-number {
+    display: flex;
+    display: -webkit-flex;
+  }
+}
+
+.actions ul li a,
+.form-radio-flex,
+.form-find {
+  display: flex;
+  display: -webkit-flex;
+}
+
+/* @extend list-type-ulli; */
+
+list-type-ulli,
+.steps ul,
+.actions ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

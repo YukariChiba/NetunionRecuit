@@ -1,0 +1,75 @@
+.form-label {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-flex {
+  margin: 0 -10px;
+
+  .form-group {
+    width: 50%;
+    padding: 0 10px;
+  }
+}
+
+.form-group,
+.form-date {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.form-college-group {
+  width: fit-content;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+
+  select {
+    border: 1px solid $border-color;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    -o-appearance: none !important;
+    -ms-appearance: none !important;
+    position: relative;
+    background: 0 0;
+    z-index: 10;
+    cursor: pointer;
+    padding: 0 20px;
+    height: 50px;
+    font-size: 14px;
+    font-family: "Roboto Slab";
+    color: $grey-color;
+    box-sizing: border-box;
+    background-color: $white-color;
+    color: $black-color;
+    font-weight: bold;
+  }
+}
+
+.form-college-item {
+  position: relative;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.form-find {
+  position: relative;
+  padding-bottom: 70px;
+  border-bottom: 1px solid $border-color;
+}
+
+.form-icon {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 18px;
+  color: $grey-color;
+}

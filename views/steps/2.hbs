@@ -1,0 +1,92 @@
+<ul id="tabs-list">
+    <li>
+        <label class="panel-label active" id="panel-1-ctr">报名</label>
+    </li>
+    <li>
+        <label class="panel-label" id="panel-2-ctr">查询</label>
+    </li>
+</ul>
+<section id="panel-1">
+    <h2>填写您的个人信息</h2>
+    <p class="desc">请准确填写您的个人信息。</p>
+    <div class="fieldset-content">
+        <div class="form-group">
+            <label class="form-label">姓名</label>
+            <div class="form-flex">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" value="张三" required />
+                    <span class="text-input">请输入您的<b>真实</b>姓名</span>
+                </div>
+                <div class="form-radio">
+                    <div class="form-group">
+                        <input type="radio" name="gender" value="male" id="male" checked required>
+                        <label for="male"><img src="images/icon-male.png" alt="男"></label>
+                        <input type="radio" name="gender" value="female" id="female">
+                        <label for="female"><img src="images/icon-female.png" alt="女"></label>
+                        <span class="text-input">性别</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" value="zhang.san@fake.domain.com" required />
+            <span class="text-input">例如 : Charles@std.uestc.edu.cn</span>
+        </div>
+        <div class="form-group">
+            <label for="phone" class="form-label">联系电话</label>
+            <input type="text" name="phone" id="phone" value="+12-13579246801" required />
+            <span class="text-input">方便我们及时的通知您</span>
+        </div>
+        <div class="form-group">
+            <label for="college" class="form-label">学院和学号</label>
+            <div class="form-college-group">
+                <div class="form-flex">
+                    <div class="form-college-item">
+                        <select class="form-control" id="college" name="college" required>
+                            <option value="" selected>--请选择学院--</option>
+                            {{#each form_data.colleges}}
+                            <option value="{{@index}}">{{this}}</option>
+                            {{/each}}
+                        </select>
+                        <span class="text-input">学院</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="stu_id" id="stu_id" value="2019000000001" required />
+                        <span class="text-input">学号</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">选择方向</label>
+            <div class="form-flex">
+                <div class="form-radio">
+                    <div class="form-group" id="direction-select-desktop">
+                        <input type="radio" name="direction" value="ui" id="ui" checked required>
+                        <span class="tooltip-toggle" aria-label="界面设计是用户体验里非常重要的一环" tabindex="0">
+                            <label class="text-label" for="ui"><img src="images/icon-ui.png" height="32" width="32"
+                                    alt="UI"><span>UI</span></label>
+                        </span>
+                        <input type="radio" name="direction" value="frontend" id="frontend">
+                        <span class="tooltip-toggle" aria-label="通过HTML，CSS及JavaScript以及衍生出来的各种技术、框架、解决方案，来实现互联网产品的用户界面交互" tabindex="0">
+                            <label class="text-label" for="frontend"><img src="images/icon-frontend.png" height="32" width="32"
+                                    alt="前端"><span>前端</span></label>
+                        </span>
+                        <input type="radio" name="direction" value="backend" id="backend"><span class="tooltip-toggle"
+                            aria-label="使用 Ruby 、 Apache 、 Nginx 、 PHP 、 MySQL 、 MongoDB 等技术开发服务器、保存和获取数据，以及用于连接前端的接口" tabindex="0">
+                            <label class="text-label" for="backend"><img src="images/icon-backend.png" height="32" width="32"
+                                    alt="后端"><span>后端</span></label></span>
+                        <input type="radio" name="direction" value="maintenance" id="maintenance">
+                        <span class="tooltip-toggle" aria-label="对网络、服务器、服务的生命周期各个阶段的运营与维护，在成本、稳定性、效率上达成一致可接受的状态" tabindex="0">
+                            <label class="text-label" for="maintenance"><img src="images/icon-maintenance.png" height="32" width="32"
+                                    alt="运维"><span>运维</span></label>
+                        </span>
+                        <span class="text-input">选择您想要做的工作</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>2_query}}

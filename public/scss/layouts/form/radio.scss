@@ -1,0 +1,135 @@
+input[type="radio"].radio-list {
+  display: none;
+}
+
+label.radio-label {
+  text-align: left;
+  width: auto;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  display: block;
+  padding: 15px 10px 15px 50px;
+  position: relative;
+  border-top: 1px solid #ddd;
+  background: $white-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.15s ease;
+
+  &:first-of-type {
+    border: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #d0d0d0;
+  }
+
+  span {
+    margin-top: 10px;
+    right: 20px;
+    color: black;
+    font-weight: normal;
+    display: block;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: white;
+    background: $blue-color;
+    border-color: white;
+  }
+}
+
+input:checked + label.radio-label {
+  color: $white-color;
+  background: $blue-color;
+  border-color: $white-color;
+}
+
+label.radio-label {
+  &:focus span,
+  &:hover span,
+  &:active span {
+    color: white;
+  }
+}
+
+input:checked + label.radio-label span {
+  color: $white-color;
+}
+
+label.radio-label {
+  &:focus:before,
+  &:hover:before,
+  &:active:before {
+    left: 13px;
+    top: 13px;
+    width: 12px;
+    height: 12px;
+    border: 4px solid $white-color;
+    background: $blue-color;
+  }
+}
+
+input:checked + label.radio-label:before {
+  left: 13px;
+  top: 13px;
+  width: 12px;
+  height: 12px;
+  border: 4px solid $white-color;
+  background: $blue-color;
+}
+
+.form-radio label {
+  margin-right: 10px;
+  padding: 12px 10px;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid transparent;
+  background-color: $grey-bg;
+  transition: border-color 0.15s ease-out, background-color 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.error .form-radio input + label {
+  border-color: $red-color;
+}
+
+.form-radio {
+  input {
+    &:checked + {
+      label,
+      span label {
+        border-color: $blue-color;
+        z-index: 1;
+        background-color: $white-color;
+      }
+    }
+
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+  }
+
+  display: contents;
+  width: 110px;
+
+  label.error {
+    display: none !important;
+  }
+}
