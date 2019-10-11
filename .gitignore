@@ -62,6 +62,7 @@ typings/
 
 # config files
 config/site.json
+config/site2.json
 
 # vscode files
 .vscode

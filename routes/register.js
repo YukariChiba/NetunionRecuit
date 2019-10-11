@@ -5,20 +5,11 @@ var bodyParse = require('body-parser')
 var jsonParser = bodyParse.json()
 var urlencoded = bodyParse.urlencoded({ extended: true })
 
-try {
-	var config = require('../config/site.json');
-} catch (e) {
-    if (e.code !== 'MODULE_NOT_FOUND') {
-        throw e;
-    }
-	var config = {}
-}
+var config = require('../utils/config')
 
 var captcha = require('express-recaptcha').RecaptchaV2;
 
-var recaptcha = new captcha(config.grecaptcha.public_token || process.env.grecaptcha_public_token, 
-    config.grecaptcha.private_token || process.env.grecaptcha_private_token, 
-    {callback:'recaptcha_callback'});
+var recaptcha = new captcha(config.grecaptcha.public_token ,config.grecaptcha.private_token, {callback:'recaptcha_callback'});
 
 var register_controller = require('../controllers/contentController')
 

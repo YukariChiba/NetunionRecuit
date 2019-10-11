@@ -1,14 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-try {
-	var config = require('../config/site.json');
-} catch (e) {
-    if (e.code !== 'MODULE_NOT_FOUND') {
-        throw e;
-    }
-	var config = {}
-}
+config = require('../utils/config')
 
 var form_data = require('../config/form_data.json');
 
